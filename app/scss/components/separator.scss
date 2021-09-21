@@ -1,3 +1,4 @@
+@use '../util' as *;
 
 .separator {
   display: flex;
@@ -19,6 +20,11 @@
     color: var(--text-gray-blue);
     position: relative;
     margin: 19.4rem 0 6.4rem;
+
+    // TABLET
+    @include respond(tab) {
+      margin: 16.4rem 0 6.7rem;
+    }
     
     &::after {
       content: '';

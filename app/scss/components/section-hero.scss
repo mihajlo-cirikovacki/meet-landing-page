@@ -1,19 +1,35 @@
 // Import all. (also works with nameSpace)
 @use '../util' as *;
 
-
-.section-hero {
-  margin-top: 10.8rem; // Design > hero to top = 216px = 108px + 80px logo margin-top (logo 28px height) 
-}
-
 .logo-container {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
+
+  // TABLET
+  @include respond(tab) {
+    margin-top: 4.8rem;
+  }
 }
+
+.section-hero {
+  margin-top: 10.8rem; // Design > hero to top = 216px = 108px + 80px logo margin-top(logo 28px height) 
+
+  @include respond(tab) {
+    margin-top: 11.9rem; 
+  }
+}
+
 
 .hero {
   display: flex;
+  
+    // TABLET
+  @include respond(tab) {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    row-gap: 7.2rem; 
+  }
 
   &__img-faces {
     display: grid;
@@ -34,12 +50,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab) {
+      grid-column: 1 / span 2;
+    }
   }
   
   .heading-primary {
     text-align: center;
     padding: 0 9.5rem;
     margin-bottom: 3.4rem;
+
+    // TABLET
+    @include respond(tab) {
+      padding: 0 22rem;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__description {
@@ -49,6 +75,11 @@
     line-height: 2.6rem;
     padding: 0 6rem;
     margin-bottom: 3.2rem;
+
+    // TABLET
+    @include respond(tab) {
+      padding: 0 13.5rem;
+    }
   }
 
   .btn-download {

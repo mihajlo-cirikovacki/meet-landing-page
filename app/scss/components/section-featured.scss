@@ -15,9 +15,19 @@
     display: flex;
     gap: 3rem;
 
+    // TABLET
+    @include respond(tab) {
+      gap: 1.1rem;
+    }
+
     &-img {
       width: 25.5rem;
       border-radius: 1.2rem;
+
+       // TABLET
+      @include respond(tab) {
+        width: 16.4rem;
+      }
     }
   }
 
@@ -29,11 +39,21 @@
     text-align: center;
     
     margin-top: 8rem;
+
+    // TABLET
+    @include respond(tab) {
+     margin-top: 4.8rem;
+    }
   }
 
   .heading-secondary {
     margin-bottom: 3.2rem;
     padding: 0 33rem;
+
+    // TABLET
+    @include respond(tab) {
+      padding: 0 16rem;
+    }
   }
 
   .subheading {
@@ -44,9 +64,13 @@
     color: var(--text-gray-blue-light2);
     line-height: 2.6rem;
     padding: 0 30rem;
-  }
 
-  
+     // TABLET
+    @include respond(tab) {
+      padding: 0 6rem;
+      font-size: 1.6rem;
+    }
+  }
 }
 
 
