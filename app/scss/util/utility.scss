@@ -1,0 +1,94 @@
+
+// TIPOGRAPHY:
+.heading-primary { 
+  font-size: 6.4rem;
+  font-weight: 900;
+  line-height: 6.4rem;
+  color: var(--heading-black-blue);
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4.4rem;
+  color: var(--heading-black-blue-light);
+
+  &--footer {
+    color: var(--white);
+  }
+}
+
+.subheading {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 2.6rem;
+  letter-spacing: .4rem;
+  color: var(--primary);
+}
+
+// BUTTONS/NAV LINKS:
+%btn { 
+  display: inline-block;
+  padding: 1.6rem 2.9rem;
+  border: none;
+  border-radius: 2.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white); 
+}
+
+%nav-link:link, 
+%nav-link:visited {
+  display: inline-block;
+  padding: 1.6rem 2.9rem;
+  border-radius: 2.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white);
+}
+
+:is(%btn, %nav-link) {
+  transition: all 300ms ease-out;  
+}
+
+
+// MOVE (Translate)
+.move-left { // Utility
+  transform: translateX(-3.2rem);
+}
+.move-right { // Utility
+  transform: translateX(3.2rem);
+}
+
+.move-up { // Utility
+  transform: translateY(-50%);
+}
+.move-down { // Utility
+  transform: translateY(50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+// Import all. (also works with nameSpace)
+@use '../util' as *;
+
+
+.section-hero {
+  margin-top: 10.8rem; // Design > hero to top = 216px = 108px + 80px logo margin-top (logo 28px height) 
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.hero {
+  display: flex;
+
+  &__img-faces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.8rem;
+
+    &-face {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heading-primary {
+    text-align: center;
+    padding: 0 9.5rem;
+    margin-bottom: 3.4rem;
+  }
+
+  &__description {
+    text-align: center;
+    line-height: 2.6rem;
+    color: var(--text-gray-blue);
+    line-height: 2.6rem;
+    padding: 0 6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .btn-download {
+    @extend %btn;
+    margin-right: 1.6rem;
+    background-color: var(--primary);
+    padding: 1.6rem 4rem;
+    
+    &:hover {
+      background-color: var(--primary-light);
+
+      .version {
+        color:  var(--primary);
+      }
+    }
+  }
+
+  .version {
+    margin-left: .4rem;
+    color: var(--primary-light);
+    transition: all 300ms ease-out;
+  }
+
+  .btn-nav {
+    @extend %nav-link;
+    background-color: var(--secondary);
+
+    &:hover,
+    &:active {
+      background-color: var(--secondary-light);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

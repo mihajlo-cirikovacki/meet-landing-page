@@ -1,0 +1,45 @@
+
+.separator {
+  display: flex;
+  justify-content: center;
+  
+  
+  &__number {
+    width: 5.6rem;
+    height: 5.6rem;
+    border: 1px solid var(--text-gray-blue-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-white);
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 2.6rem;
+    color: var(--text-gray-blue);
+    position: relative;
+    margin: 19.4rem 0 6.4rem;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(-100% + -3rem);
+      width: 1px;
+      height: 8.4rem;
+      background-color: var(--text-gray-blue-light);
+    }
+
+    &--smaller {
+      margin-top: 15.6rem;
+      margin-bottom: 0rem;
+      transform: translateY(50%);
+    }
+  }
+}
+
+
+
+
+
+
+

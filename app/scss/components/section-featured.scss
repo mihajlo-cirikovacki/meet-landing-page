@@ -1,0 +1,68 @@
+@use '../util' as *;
+
+.section-featured {
+  max-width: 111rem;
+  margin: 0 auto;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &__gallery {
+    display: flex;
+    gap: 3rem;
+
+    &-img {
+      width: 25.5rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    margin-top: 8rem;
+  }
+
+  .heading-secondary {
+    margin-bottom: 3.2rem;
+    padding: 0 33rem;
+  }
+
+  .subheading {
+    margin-bottom: 1.6rem;
+  }
+
+  &__description {
+    color: var(--text-gray-blue-light2);
+    line-height: 2.6rem;
+    padding: 0 30rem;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
