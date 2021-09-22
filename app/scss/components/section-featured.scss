@@ -10,6 +10,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  // PHONE
+  @include respond(sm-phone) {
+    margin: 0 2.4rem;
+  }
   
   &__gallery {
     display: flex;
@@ -20,6 +25,12 @@
       gap: 1.1rem;
     }
 
+     // PHONE
+     @include respond(sm-phone) {
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
     &-img {
       width: 25.5rem;
       border-radius: 1.2rem;
@@ -27,6 +38,11 @@
        // TABLET
       @include respond(tab) {
         width: 16.4rem;
+      }
+
+      // PHONE
+      @include respond(sm-phone) {
+        width: 15.1rem;
       }
     }
   }
@@ -44,6 +60,10 @@
     @include respond(tab) {
      margin-top: 4.8rem;
     }
+    // Phone
+    @include respond(sm-phone) {
+     margin-top: 6.4rem;
+    }
   }
 
   .heading-secondary {
@@ -54,10 +74,20 @@
     @include respond(tab) {
       padding: 0 16rem;
     }
+
+    // Phone
+    @include respond(sm-phone) {
+      padding: 0;
+    }
   }
 
   .subheading {
     margin-bottom: 1.6rem;
+
+    // Phone
+    @include respond(sm-phone) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__description {
@@ -69,6 +99,11 @@
     @include respond(tab) {
       padding: 0 9rem;
       font-size: 1.6rem;
+    }
+
+     // Phone
+     @include respond(sm-phone) {
+      padding: 0 1rem; 
     }
   }
 }
