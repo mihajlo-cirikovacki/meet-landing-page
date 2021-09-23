@@ -98,10 +98,11 @@
   }
 
   &__description {
-    text-align: center;
+    font-size: 1.8rem;
     line-height: 2.6rem;
     color: var(--text-gray-blue);
     padding: 0 6rem;
+    text-align: center;
     margin-bottom: 3.2rem;
 
     // TABLET
