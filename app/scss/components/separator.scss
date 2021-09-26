@@ -1,8 +1,8 @@
+@use '../util' as *;
 
 .separator {
   display: flex;
   justify-content: center;
-  
   
   &__number {
     width: 5.6rem;
@@ -19,6 +19,16 @@
     color: var(--text-gray-blue);
     position: relative;
     margin: 19.4rem 0 6.4rem;
+
+    // TABLET
+    @include respond(tab) {
+      margin: 16.4rem 0 6.7rem;
+    }
+
+     // PHONE
+     @include respond(sm-phone) {
+      margin: 14.8rem 0 6.4rem;
+    }
     
     &::after {
       content: '';
@@ -33,6 +43,15 @@
       margin-top: 15.6rem;
       margin-bottom: 0rem;
       transform: translateY(50%);
+
+      // TABLET
+      @include respond(tab) {
+        margin-top: 16.4rem;
+      }
+      // PHONE
+      @include respond(sm-phone) {
+        margin-top: 14.8rem;
+      }
     }
   }
 }

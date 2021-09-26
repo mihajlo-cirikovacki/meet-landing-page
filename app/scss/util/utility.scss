@@ -1,3 +1,4 @@
+@use '../util/breakpoints.scss' as *;
 
 // TIPOGRAPHY:
 .heading-primary { 
@@ -5,6 +6,18 @@
   font-weight: 900;
   line-height: 6.4rem;
   color: var(--heading-black-blue);
+
+   // TABLET
+  @include respond(tab) {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+   // PHONE
+   @include respond(sm-phone) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+  }
 }
 
 .heading-secondary {
@@ -13,8 +26,27 @@
   line-height: 4.4rem;
   color: var(--heading-black-blue-light);
 
+   // PHONE
+   @include respond(sm-phone) {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+
   &--footer {
     color: var(--white);
+
+    // TABLET
+    @include respond(tab) {
+      text-align: center;
+      padding: 0 4rem;
+      margin-bottom: 3.2rem;
+    }
+
+    // PHONE
+    @include respond(sm-phone) {
+      padding: 0 3rem;
+      margin-bottom: 2.4rem;
+    }
   }
 }
 
@@ -56,19 +88,56 @@
 
 
 // MOVE (Translate)
-.move-left { // Utility
+.move-left { 
   transform: translateX(-3.2rem);
-}
-.move-right { // Utility
-  transform: translateX(3.2rem);
+
+   // TABLET
+   @include respond(tab) {
+    transform: translateX(-2.6rem);
+  }
+
+   // PHONE
+   @include respond(sm-phone) { 
+    transform: translateX(-2rem);
+  }
 }
 
-.move-up { // Utility
+.move-right { 
+  transform: translateX(3.2rem);
+
+  // TABLET
+  @include respond(tab) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    transform: translateX(.65rem);
+  }
+
+   // PHONE
+   @include respond(sm-phone) { 
+    transform: translateX(.35rem);
+  }
+}
+
+.move-up { 
   transform: translateY(-50%);
+
+  &--tab {
+    // TABLET
+    @include respond(tab) {
+      transform: translateY(-50%);
+    }
+  }
 }
-.move-down { // Utility
+.move-down { 
   transform: translateY(50%);
+
+  // TABLET
+  @include respond(tab) {
+    transform: translateY(0);
+  }
 }
+
+
 
 
 
